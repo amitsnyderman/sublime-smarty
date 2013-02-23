@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+{% if ${1:condition} %}
+	$3
+{% else${2: condition} %}
+	$4
+{% /if %}
+]]></content>
+	<tabTrigger>ifelse</tabTrigger>
+	<scope>source.smarty</scope>
+</snippet>
