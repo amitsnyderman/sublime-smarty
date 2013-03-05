@@ -5,5 +5,5 @@
 {% /if %}
 ]]></content>
 	<tabTrigger>if</tabTrigger>
-	<scope>source.smarty</scope>
+	<scope>text.html.smarty,source.smarty</scope>
 </snippet>
