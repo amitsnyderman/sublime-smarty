@@ -16,7 +16,7 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>(\{)\*</string>
+			<string>(\{%)\*</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -26,7 +26,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\*(\})</string>
+			<string>\*(%\})</string>
 			<key>name</key>
 			<string>comment.block.smarty</string>
 			<key>patterns</key>
@@ -101,7 +101,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(and|or)\b</string>
+			<string>(!=|!|&lt;=|&gt;=|&lt;|&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b</string>
 			<key>name</key>
 			<string>keyword.operator.smarty</string>
 		</dict>
