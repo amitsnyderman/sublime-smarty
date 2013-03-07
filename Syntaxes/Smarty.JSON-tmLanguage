@@ -49,7 +49,7 @@
 			}
 		},
 		{
-			"match": "\\b(and|or)\\b",
+			"match": "(!=|!|<=|>=|<|>|===|==|%|&&|\\|\\|)|\\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\\b",
 			"name": "keyword.operator.smarty"
 		},
 		{
