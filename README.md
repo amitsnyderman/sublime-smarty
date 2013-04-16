@@ -15,8 +15,17 @@ Clone this repository in to the Sublime Text 2 "Packages" directory, which is lo
 Set syntax of your file to be Smarty.
 
 Currently supported autocompletions (type the keyword and then hit tab):
+* assign
+* capture
+* /capture
+* comment (creates a comment block)
+* debug (creates a debug print variable statement)
 * else
+* elseif
 * foreach
+* /foreach
 * if
+* /if
 * ifelse
-
+* include
+* smarty (creates an empty smarty block)

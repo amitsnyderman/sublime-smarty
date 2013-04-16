@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{% capture ${2:name="${1:name}" }${4:assign="${3:variable}" }${6:append="${5:array_variable}" }%}
+	$0
+{% /capture %}
+]]></content>
+	<tabTrigger>capture</tabTrigger>
+	<scope>text.html.smarty,source.smarty</scope>
+</snippet>
