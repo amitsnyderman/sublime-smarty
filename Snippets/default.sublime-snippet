@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+{% default %}
+    $0
+]]></content>
+    <tabTrigger>default</tabTrigger>
+    <scope>text.html.smarty,source.smarty</scope>
+</snippet>
