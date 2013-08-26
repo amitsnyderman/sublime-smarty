@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+{% break %}$0
+]]></content>
+    <tabTrigger>break</tabTrigger>
+    <scope>text.html.smarty,source.smarty</scope>
+</snippet>
