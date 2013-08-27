@@ -113,13 +113,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(if|else|elseif|foreach|foreachelse|section)\b</string>
+			<string>\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default)\b</string>
 			<key>name</key>
 			<string>keyword.control.smarty</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|html_[a-z_]*)\b</string>
+			<string>\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b</string>
 			<key>name</key>
 			<string>support.function.built-in.smarty</string>
 		</dict>
