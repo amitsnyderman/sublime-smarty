@@ -57,11 +57,11 @@
 			"name": "constant.language.smarty"
 		},
 		{
-			"match": "\\b(if|else|elseif|foreach|foreachelse|section)\\b",
+			"match": "\\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default)\\b",
 			"name": "keyword.control.smarty"
 		},
 		{
-			"match": "\\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|html_[a-z_]*)\\b",
+			"match": "\\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\\b",
 			"name": "support.function.built-in.smarty"
 		},
 		{
