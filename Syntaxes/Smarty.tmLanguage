@@ -5,19 +5,18 @@
 	<key>fileTypes</key>
 	<array>
 		<string>tpl</string>
-		<string>tpl.php</string>
 	</array>
 	<key>foldingStartMarker</key>
-	<string>\{</string>
+	<string>\{%</string>
 	<key>foldingStopMarker</key>
-	<string>\}</string>
+	<string>%\}</string>
 	<key>name</key>
 	<string>Smarty</string>
 	<key>patterns</key>
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>\{\*</string>
+			<string>(\{%)\*</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -27,7 +26,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\*\}</string>
+			<string>\*(%\})</string>
 			<key>name</key>
 			<string>comment.block.smarty</string>
 			<key>patterns</key>
