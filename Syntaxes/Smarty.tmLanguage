@@ -8,9 +8,9 @@
 		<string>tpl.php</string>
 	</array>
 	<key>foldingStartMarker</key>
-	<string>\{%</string>
+	<string>\{</string>
 	<key>foldingStopMarker</key>
-	<string>%\}</string>
+	<string>\}</string>
 	<key>name</key>
 	<string>Smarty</string>
 	<key>patterns</key>
@@ -100,15 +100,12 @@
 				</dict>
 			</array>
 		</dict>
-		<!--
 		<dict>
 			<key>match</key>
 			<string>(!=|!|&lt;=|&gt;=|&lt;|(?&lt;!-)&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b</string>
 			<key>name</key>
 			<string>keyword.operator.smarty</string>
 		</dict>
-		-->
-
 		<dict>
 			<key>match</key>
 			<string>\b(TRUE|FALSE|true|false)\b</string>
