@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>tpl</string>
+		<string>tpl.php</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>\{%</string>
