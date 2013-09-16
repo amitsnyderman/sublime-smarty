@@ -101,12 +101,6 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(!=|!|&lt;=|&gt;=|&lt;|(?&lt;!-)&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b</string>
-			<key>name</key>
-			<string>keyword.operator.smarty</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>\b(TRUE|FALSE|true|false)\b</string>
 			<key>name</key>
 			<string>constant.language.smarty</string>
