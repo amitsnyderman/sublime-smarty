@@ -21,7 +21,7 @@
 {% include file="file" key="value" %}
 
 {% $var %}
-{% $var->method() %}
+{% $var->method($param, $elem) %}
 
 
 {assign var="name" value="value"}

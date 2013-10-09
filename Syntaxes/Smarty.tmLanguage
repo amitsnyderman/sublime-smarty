@@ -246,9 +246,14 @@
 							<key>name</key>
 							<string>punctuation.definition.variable.smarty</string>
 						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.smarty</string>
+						</dict>
 					</dict>
 					<key>match</key>
-					<string>(\$)[a-zA-Z_][a-zA-Z0-9_]*\b</string>
+					<string>(\$)([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 					<key>name</key>
 					<string>variable.other.smarty</string>
 				</dict>
@@ -258,11 +263,45 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
+							<string>keyword.operator.smarty</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.property.smarty</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(-&gt;)([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
+					<key>name</key>
+					<string>variable.other.smarty</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.smarty</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>meta.function-call.object.smarty</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.variable.smarty</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
 							<string>punctuation.definition.variable.smarty</string>
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\w(-&gt;)\w</string>
+					<string>(-&gt;)([a-zA-Z_][a-zA-Z0-9_]*)(\().*?(\))</string>
 					<key>name</key>
 					<string>variable.other.smarty</string>
 				</dict>

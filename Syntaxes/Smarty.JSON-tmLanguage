@@ -66,17 +66,29 @@
 					}
 				},
 				{
-					"match": "(\\$)[a-zA-Z_][a-zA-Z0-9_]*\\b",
+					"match": "(\\$)([a-zA-Z_][a-zA-Z0-9_]*)\\b",
 					"name": "variable.other.smarty",
 					"captures": {
-						"1": { "name": "punctuation.definition.variable.smarty" }
+						"1": { "name": "punctuation.definition.variable.smarty" },
+						"2": { "name": "variable.other.smarty" }
 					}
 				},
 				{
-					"match": "\\w(->)\\w",
+					"match": "(->)([a-zA-Z_][a-zA-Z0-9_]*)\\b",
 					"name": "variable.other.smarty",
 					"captures": {
-						"1": { "name": "punctuation.definition.variable.smarty" }
+						"1": { "name": "keyword.operator.smarty" },
+						"2": { "name": "variable.other.property.smarty" }
+					}
+				},
+				{
+					"match": "(->)([a-zA-Z_][a-zA-Z0-9_]*)(\\().*?(\\))",
+					"name": "variable.other.smarty",
+					"captures": {
+						"1": { "name": "keyword.operator.smarty" },
+						"2": { "name": "meta.function-call.object.smarty" },
+						"3": { "name": "punctuation.definition.variable.smarty" },
+						"4": { "name": "punctuation.definition.variable.smarty" }
 					}
 				}
 			]
