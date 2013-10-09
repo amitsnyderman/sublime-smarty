@@ -62,14 +62,21 @@
 					"match": "\\b(\\$)Smarty\\.",
 					"name": "variable.other.global.smarty",
 					"captures": {
-						"0": { "name": "punctuation.definition.variable.smarty" }
+						"1": { "name": "punctuation.definition.variable.smarty" }
 					}
 				},
 				{
 					"match": "(\\$)[a-zA-Z_][a-zA-Z0-9_]*\\b",
 					"name": "variable.other.smarty",
 					"captures": {
-						"0": { "name": "punctuation.definition.variable.smarty" }
+						"1": { "name": "punctuation.definition.variable.smarty" }
+					}
+				},
+				{
+					"match": "\\w(->)\\w",
+					"name": "variable.other.smarty",
+					"captures": {
+						"1": { "name": "punctuation.definition.variable.smarty" }
 					}
 				}
 			]
@@ -111,11 +118,11 @@
 					"name": "source.smarty",
 					"begin": "(\\{%?)",
 					"beginCaptures": {
-						"1": { "name": "punctuation.definition.smarty" }
+						"1": { "name": "punctuation.section.embedded.begin.smarty" }
 					},
 					"end": "(%?\\})",
 					"endCaptures": {
-						"1": { "name": "punctuation.definition.smarty" }
+						"1": { "name": "punctuation.section.embedded.end.smarty" }
 					},
 					"patterns": [
 						{
