@@ -36,8 +36,24 @@
 				<dict>
 					<key>begin</key>
 					<string>(\{%)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.smarty</string>
+						</dict>
+					</dict>
 					<key>end</key>
 					<string>(%\})</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.smarty</string>
+						</dict>
+					</dict>
 					<key>name</key>
 					<string>source.smarty</string>
 					<key>patterns</key>
@@ -105,6 +121,20 @@
 					<string>keyword.control.smarty</string>
 				</dict>
 				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>variable.parameter.smarty</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b([a-zA-Z]+)=</string>
+					<key>name</key>
+					<string>meta.attribute.smarty</string>
+				</dict>
+				<dict>
 					<key>match</key>
 					<string>\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b</string>
 					<key>name</key>
@@ -115,12 +145,6 @@
 					<string>\|(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap)</string>
 					<key>name</key>
 					<string>support.function.variable-modifier.smarty</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\b[a-zA-Z]+=</string>
-					<key>name</key>
-					<string>meta.attribute.smarty</string>
 				</dict>
 			</array>
 		</dict>
@@ -203,7 +227,7 @@
 				<dict>
 					<key>captures</key>
 					<dict>
-						<key>1</key>
+						<key>0</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.variable.smarty</string>
@@ -217,7 +241,7 @@
 				<dict>
 					<key>captures</key>
 					<dict>
-						<key>1</key>
+						<key>0</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.variable.smarty</string>
