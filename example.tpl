@@ -31,9 +31,9 @@
 {/capture}
 
 {if isset($name) && not empty($name) and ($name == "string" || $name eq 'string')}
-	{%* True *%}
+	{* True *}
 {else}
-	{%* False *%}
+	{* False *}
 {/if}
 
 {if 2 > 1 and 2 gt 1 and 1 < 2 and 1 lt 2}
