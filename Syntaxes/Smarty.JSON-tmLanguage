@@ -2,19 +2,19 @@
 	"name": "Smarty",
 	"scopeName": "text.html.smarty",
 	"fileTypes": ["tpl"],
-	"foldingStartMarker": "\\{%",
-	"foldingStopMarker": "%\\}",
+	"foldingStartMarker": "\\{%?",
+	"foldingStopMarker": "%?\\}",
 	"repository": {
 		"comments": {
 			"patterns": [
 				{
 					"name": "comment.block.smarty",
-					"begin": "(\\{%)\\*",
+					"begin": "(\\{%?)\\*",
 					"beginCaptures": {
 						"1": {"name": "punctuation.definition.comment.smarty"}
 					},
 					"patterns": [],
-					"end": "\\*(%\\})"
+					"end": "\\*(%?\\})"
 				}
 			]
 		},
@@ -109,11 +109,11 @@
 			"patterns": [
 				{
 					"name": "source.smarty",
-					"begin": "(\\{%)",
+					"begin": "(\\{%?)",
 					"beginCaptures": {
 						"1": { "name": "punctuation.definition.smarty" }
 					},
-					"end": "(%\\})",
+					"end": "(%?\\})",
 					"endCaptures": {
 						"1": { "name": "punctuation.definition.smarty" }
 					},
