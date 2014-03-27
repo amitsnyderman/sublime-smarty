@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-{% if ${1:condition} %}
+${SMARTY_LDELIM:\{}if ${1:condition}${SMARTY_RDELIM:\}}
 	$0
-{% /if %}
+${SMARTY_LDELIM:\{}/if${SMARTY_RDELIM:\}}
 ]]></content>
 	<tabTrigger>if</tabTrigger>
 	<scope>text.html.smarty,source.smarty</scope>

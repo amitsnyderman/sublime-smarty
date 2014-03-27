@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-{% foreach from=${1:collection} item=${2:item}${4: key=${3:key}}${6: name=${5:name}} %}
+${SMARTY_LDELIM:\{}foreach from=${1:collection} item=${2:item}${4: key=${3:key}}${6: name=${5:name}}${SMARTY_RDELIM:\}}
 	$0
-{% /foreach %}
+${SMARTY_LDELIM:\{}/foreach${SMARTY_RDELIM:\}}
 ]]></content>
 	<tabTrigger>foreach</tabTrigger>
 	<scope>text.html.smarty,source.smarty</scope>

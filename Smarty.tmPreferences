@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Globals</string>
+    <key>scope</key>
+    <string></string>
+    <key>settings</key>
+    <dict>
+        <key>shellVariables</key>
+        <array>
+            <dict>
+                <key>name</key>
+                <string>SMARTY_LDELIM</string>
+                <key>value</key>
+                <string><![CDATA[{% ]]></string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>SMARTY_RDELIM</string>
+                <key>value</key>
+                <string><![CDATA[ %}]]></string>
+            </dict>
+        </array>
+    </dict>
+</dict>
+</plist>

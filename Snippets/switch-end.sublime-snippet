@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-{% /switch %}
+${SMARTY_LDELIM:\{}/switch${SMARTY_RDELIM:\}}
 $0
 ]]></content>
     <tabTrigger>/switch</tabTrigger>

@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-{% capture ${2:name="${1:name}" }${4:assign="${3:variable}" }${6:append="${5:array_variable}" }%}
+${SMARTY_LDELIM:\{}capture ${2:name="${1:name}" }${4:assign="${3:variable}" }${6:append="${5:array_variable}"}${SMARTY_RDELIM:\}}
 	$0
-{% /capture %}
+${SMARTY_LDELIM:\{}/capture${SMARTY_RDELIM:\}}
 ]]></content>
 	<tabTrigger>capture</tabTrigger>
 	<scope>text.html.smarty,source.smarty</scope>
