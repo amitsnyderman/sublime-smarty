@@ -11,6 +11,8 @@ Loosely based on the [Smarty Textmate bundle][2]
 ## Installation
 Clone this repository in to the Sublime Text 2 "Packages" directory, which is located wherever the "Preferences" -> "Browse Packages" option in sublime takes you. A restart of Sublime may be necessary.
 
+Update the default sublime syntax of all `.tpl` files to be `Smarty` : http://stackoverflow.com/questions/7574502/set-default-syntax-to-different-filetype-in-sublime-text-2
+
 ## Usage
 Set syntax of your file to be Smarty.
 
