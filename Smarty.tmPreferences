@@ -14,13 +14,13 @@
                 <key>name</key>
                 <string>SMARTY_LDELIM</string>
                 <key>value</key>
-                <string><![CDATA[{% ]]></string>
+                <string><![CDATA[{]]></string>
             </dict>
             <dict>
                 <key>name</key>
                 <string>SMARTY_RDELIM</string>
                 <key>value</key>
-                <string><![CDATA[ %}]]></string>
+                <string><![CDATA[}]]></string>
             </dict>
         </array>
     </dict>
