@@ -22,6 +22,7 @@ Currently supported autocompletions (type the keyword and then hit tab):
 * /capture
 * comment (creates a comment block)
 * debug (creates a debug print variable statement)
+* dump (create a var_dump of variable like in php)
 * else
 * elseif
 * foreach
