@@ -1,11 +1,11 @@
 <snippet>
     <content><![CDATA[
-{% switch \$${1:variable} %}
-    {% case ${2:case_name} %}
+${SMARTY_LDELIM:\{}switch \$${1:variable}${SMARTY_RDELIM:\}}
+    ${SMARTY_LDELIM:\{}case ${2:case_name}${SMARTY_RDELIM:\}}
         $0
-        ${3:\{% break %\}}
-    ${4:\{% default %\}}
-{% /switch %}
+        ${3:${SMARTY_LDELIM:\{}break${SMARTY_RDELIM:\}}}
+    ${4:${SMARTY_LDELIM:\{}default${SMARTY_RDELIM:\}}}
+${SMARTY_LDELIM:\{}/switch${SMARTY_RDELIM:\}}
 ]]></content>
     <tabTrigger>switch</tabTrigger>
     <scope>text.html.smarty,source.smarty</scope>
