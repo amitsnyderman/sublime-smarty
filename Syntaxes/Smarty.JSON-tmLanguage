@@ -96,7 +96,7 @@
 		"lang": {
 			"patterns": [
 				{
-					"match": "(!=|!|<=|>=|<|>|===|==|%|&&|\\|\\|)|\\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\\b",
+					"match": "(!==|!=|!|<=|>=|<|>|===|==|%|&&|\\|\\|)|\\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\\b",
 					"name": "keyword.operator.smarty"
 				},
 				{
