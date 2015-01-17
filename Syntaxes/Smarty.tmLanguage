@@ -104,7 +104,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(!=|!|&lt;=|&gt;=|&lt;|&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b</string>
+					<string>(!==|!=|!|&lt;=|&gt;=|&lt;|&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b</string>
 					<key>name</key>
 					<string>keyword.operator.smarty</string>
 				</dict>
