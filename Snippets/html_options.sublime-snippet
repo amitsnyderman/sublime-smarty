@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+        ${SMARTY_LDELIM:\{}html_options ${2:options=\$${1:options} }${5:values=\$${3:values} output=\$${4:output} }selected=\$${6:selected_key}${8: name=${7:name}}${SMARTY_RDELIM:\}}$0
+]]></content>
+    <tabTrigger>html_options</tabTrigger>
+    <scope>text.html.smarty,source.smarty</scope>
+</snippet>
