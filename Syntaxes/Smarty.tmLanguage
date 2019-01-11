@@ -128,9 +128,14 @@
 							<key>name</key>
 							<string>variable.parameter.smarty</string>
 						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.assignment.smarty</string>
+						</dict>
 					</dict>
 					<key>match</key>
-					<string>\b([a-zA-Z]+)=</string>
+					<string>\b([a-zA-Z]+)(=)</string>
 					<key>name</key>
 					<string>meta.attribute.smarty</string>
 				</dict>
