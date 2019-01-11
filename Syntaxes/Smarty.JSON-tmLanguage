@@ -108,10 +108,10 @@
 					"name": "keyword.control.smarty"
 				},
 				{
-					"match": "\\b([a-zA-Z]+)=",
+					"match": "\\b([a-zA-Z]+)(=)",
 					"name": "meta.attribute.smarty",
 					"captures": {
-						"0": { "name": "variable.parameter.smarty" }
+						"0": { "name": "variable.parameter.smarty" },
 						"2": { "name": "keyword.operator.assignment.smarty" }
 					},
 				},
