@@ -27,7 +27,7 @@
 {assign var="name" value="value"}
 
 {capture name="name" assign="variable"}
-	<p class="test">Embedded HTML</p>
+	<p class="test {$some_var}">Embedded HTML</p>
 {/capture}
 
 {if isset($name) && not empty($name) and ($name == "string" || $name eq 'string')}
