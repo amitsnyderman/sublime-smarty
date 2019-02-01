@@ -45,8 +45,14 @@ contexts:
         2: keyword.operator.assignment.smarty
     - match: '\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b'
       scope: support.function.built-in.smarty
-    - match: \|(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap)
-      scope: support.function.variable-modifier.smarty
+    - match: (\|)(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap)
+      captures:
+        1: keyword.operator.logical.pipe.smarty
+        2: support.function.variable-modifier.smarty
+    - match: (\|)([a-z-_]+)
+      captures:
+        1: keyword.operator.logical.pipe.smarty
+        2: support.function.variable-modifier.custom.smarty
 
   strings:
     - match: "'"
