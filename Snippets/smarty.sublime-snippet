@@ -1,7 +1,8 @@
 <snippet>
-	<content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}${1:code}${SMARTY_RDELIM:\}}$0
 ]]></content>
-	<tabTrigger>smarty</tabTrigger>
-	<scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>smarty</tabTrigger>
+<description>smarty variable</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

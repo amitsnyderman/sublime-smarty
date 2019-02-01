@@ -1,8 +1,9 @@
 <snippet>
-    <content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}default${SMARTY_RDELIM:\}}
-    $0
+	$0
 ]]></content>
-    <tabTrigger>default</tabTrigger>
-    <scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>default</tabTrigger>
+<description>smarty default</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

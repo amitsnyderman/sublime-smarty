@@ -1,7 +1,8 @@
 <snippet>
-	<content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}/capture${SMARTY_RDELIM:\}}$0
 ]]></content>
-	<tabTrigger>/capture</tabTrigger>
-	<scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>/capture</tabTrigger>
+<description>smarty capture end</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

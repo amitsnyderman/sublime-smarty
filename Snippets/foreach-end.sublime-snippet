@@ -1,7 +1,8 @@
 <snippet>
-	<content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}/foreach${SMARTY_RDELIM:\}}$0
 ]]></content>
-	<tabTrigger>/foreach</tabTrigger>
-	<scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>/foreach</tabTrigger>
+<description>smarty foreach end</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

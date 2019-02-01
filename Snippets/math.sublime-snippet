@@ -1,7 +1,8 @@
 <snippet>
-    <content><![CDATA[
-        ${SMARTY_LDELIM:\{}math equation="${1:x + y}" ${2:x}=\$${3:height} ${6:${4:y}=\$${5:width} }${8:assign="${7:assign}"}${SMARTY_RDELIM:\}}$0
+<content><![CDATA[
+${SMARTY_LDELIM:\{}math equation="${1:x + y}" ${2:x}=\$${3:height} ${6:${4:y}=\$${5:width} }${8:assign="${7:assign}"}${SMARTY_RDELIM:\}}$0
 ]]></content>
-    <tabTrigger>math</tabTrigger>
-    <scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>math</tabTrigger>
+<description>smarty math</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

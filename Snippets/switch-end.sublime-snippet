@@ -1,8 +1,9 @@
 <snippet>
-    <content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}/switch${SMARTY_RDELIM:\}}
 $0
 ]]></content>
-    <tabTrigger>/switch</tabTrigger>
-    <scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>/switch</tabTrigger>
+<description>smarty switch end</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

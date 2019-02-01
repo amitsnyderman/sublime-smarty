@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}switch \$${1:variable}${SMARTY_RDELIM:\}}
     ${SMARTY_LDELIM:\{}case ${2:case_name}${SMARTY_RDELIM:\}}
         $0
@@ -7,6 +7,7 @@ ${SMARTY_LDELIM:\{}switch \$${1:variable}${SMARTY_RDELIM:\}}
     ${4:${SMARTY_LDELIM:\{}default${SMARTY_RDELIM:\}}}
 ${SMARTY_LDELIM:\{}/switch${SMARTY_RDELIM:\}}
 ]]></content>
-    <tabTrigger>switch</tabTrigger>
-    <scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>switch</tabTrigger>
+<description>smarty switch</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

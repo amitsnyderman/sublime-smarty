@@ -1,11 +1,12 @@
 <snippet>
-	<content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}if ${1:condition}${SMARTY_RDELIM:\}}
 	$2
 ${SMARTY_LDELIM:\{}else${SMARTY_RDELIM:\}}
 	$3
 ${SMARTY_LDELIM:\{}/if${SMARTY_RDELIM:\}}
 ]]></content>
-	<tabTrigger>ifelse</tabTrigger>
-	<scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>ifelse</tabTrigger>
+<description>smarty if else</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>

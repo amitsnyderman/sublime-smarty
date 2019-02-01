@@ -1,7 +1,8 @@
 <snippet>
-	<content><![CDATA[
+<content><![CDATA[
 ${SMARTY_LDELIM:\{}include file="${1:file}"${3: assign=${2:name}}${6: ${4:var1}=${5:value}}${SMARTY_RDELIM:\}}$0
 ]]></content>
-	<tabTrigger>include</tabTrigger>
-	<scope>text.html.smarty,source.smarty</scope>
+<tabTrigger>include</tabTrigger>
+<description>smarty include</description>
+<scope>text.html.smarty,source.smarty</scope>
 </snippet>
