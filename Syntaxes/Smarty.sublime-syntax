@@ -34,6 +34,8 @@ contexts:
   lang:
     - match: (!==|!=|!|<=|>=|<|>|===|==|%|&&|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b
       scope: keyword.operator.smarty
+    - match: '\,'
+      scope: punctuation.separator.smarty
     - match: \b(TRUE|FALSE|true|false)\b
       scope: constant.language.smarty
     - match: \b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default)\b
@@ -45,6 +47,21 @@ contexts:
         2: keyword.operator.assignment.smarty
     - match: '\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b'
       scope: support.function.built-in.smarty
+    - match: '\b([a-z-_]+)\b(?=\()'
+      scope: meta.function-call.smarty
+      captures:
+        1: variable.function.smarty
+      push:
+        - meta_scope: meta.group.smarty
+        - match: '\('
+          scope: punctuation.group.begin.smarty
+        - match: '\)'
+          scope: punctuation.group.end.smarty
+          pop: true
+        - include: lang
+        - include: variables
+        - include: strings
+
     - match: (\|)(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap)
       captures:
         1: keyword.operator.logical.pipe.smarty
@@ -87,15 +104,25 @@ contexts:
       scope: variable.other.smarty
       captures:
         1: punctuation.definition.variable.smarty
+    - match: '(->)([a-zA-Z_][a-zA-Z0-9_]*)\b(?=\()'
+      scope: meta.function-call.object.smarty
+      captures:
+        1: keyword.operator.smarty
+        2: variable.function.smarty
+        3: punctuation.definition.variable.smarty
+        4: punctuation.definition.variable.smarty
+      push:
+        - meta_scope: meta.group.smarty
+        - match: '\('
+          scope: punctuation.group.begin.smarty
+        - match: '\)'
+          scope: punctuation.group.end.smarty
+          pop: true
+        - include: lang
+        - include: variables
+        - include: strings
     - match: '(->)([a-zA-Z_][a-zA-Z0-9_]*)\b'
       scope: variable.other.smarty
       captures:
         1: keyword.operator.smarty
         2: variable.other.property.smarty
-    - match: '(->)([a-zA-Z_][a-zA-Z0-9_]*)(\().*?(\))'
-      scope: variable.other.smarty
-      captures:
-        1: keyword.operator.smarty
-        2: meta.function-call.object.smarty
-        3: punctuation.definition.variable.smarty
-        4: punctuation.definition.variable.smarty
