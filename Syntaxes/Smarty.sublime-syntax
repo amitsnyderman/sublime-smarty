@@ -87,7 +87,6 @@ contexts:
       scope: variable.other.smarty
       captures:
         1: punctuation.definition.variable.smarty
-        2: variable.other.smarty
     - match: '(->)([a-zA-Z_][a-zA-Z0-9_]*)\b'
       scope: variable.other.smarty
       captures:
