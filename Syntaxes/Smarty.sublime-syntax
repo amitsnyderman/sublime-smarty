@@ -62,7 +62,7 @@ contexts:
         - include: variables
         - include: strings
 
-    - match: (\|)(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap)
+    - match: (\|)(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap|@count)
       captures:
         1: keyword.operator.logical.pipe.smarty
         2: support.function.variable-modifier.smarty
