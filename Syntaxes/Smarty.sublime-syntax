@@ -18,12 +18,12 @@ contexts:
             - meta_scope: comment.block.smarty
             - match: '\*(%?\})'
               pop: true
-        - match: '(\{%?)'
+        - match: '(\{(?!\s)|\{%\s?)'
           captures:
             1: punctuation.section.embedded.begin.smarty
           push:
             - meta_scope: source.smarty
-            - match: '(%?\})'
+            - match: '(\s%\}|(?!\s)\})'
               captures:
                 1: punctuation.section.embedded.end.smarty
               pop: true
