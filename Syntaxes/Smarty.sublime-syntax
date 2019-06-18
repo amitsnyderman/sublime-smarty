@@ -42,7 +42,7 @@ contexts:
       scope: constant.language.smarty
     - match: '\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default|as)\b'
       scope: keyword.control.smarty
-    - match: '\b([0-1]+)\b'
+    - match: '\b([0-9]+)\b'
       scope: constant.numeric.smarty
     - match: '\b([a-zA-Z]+)(=)'
       scope: meta.attribute.smarty
