@@ -34,13 +34,13 @@ contexts:
   lang:
     - match: '\+|\-|\*'
       scope: keyword.operator.math.smarty
-    - match: (!==|!=|!|=>|<=|>=|<|>|===|==|%|&&|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b
+    - match: '(!==|!=|!|=>|<=|>=|<|>|===|==|%|&&|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b'
       scope: keyword.operator.smarty
     - match: '\,'
       scope: punctuation.separator.smarty
-    - match: \b(TRUE|FALSE|true|false)\b
+    - match: '\b(TRUE|FALSE|true|false)\b'
       scope: constant.language.smarty
-    - match: \b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default|as)\b
+    - match: '\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default|as)\b'
       scope: keyword.control.smarty
     - match: '\b([0-1]+)\b'
       scope: constant.numeric.smarty
@@ -72,7 +72,7 @@ contexts:
       captures:
         1: keyword.operator.logical.pipe.smarty
         2: support.function.variable-modifier.smarty
-    - match: (\|)([a-z-_]+)
+    - match: '(\|)([a-z-_]+)'
       captures:
         1: keyword.operator.logical.pipe.smarty
         2: support.function.variable-modifier.custom.smarty
@@ -87,7 +87,7 @@ contexts:
           captures:
             0: punctuation.definition.string.end.smarty
           pop: true
-        - match: \\.
+        - match: '\\.'
           scope: constant.character.escape.smarty
     - match: '"'
       captures:
@@ -98,11 +98,11 @@ contexts:
           captures:
             0: punctuation.definition.string.end.smarty
           pop: true
-        - match: \\.
+        - match: '\\.'
           scope: constant.character.escape.smarty
 
   variables:
-    - match: \b(\$)Smarty\.
+    - match: '\b(\$)Smarty\.'
       scope: variable.other.global.smarty
       captures:
         1: punctuation.definition.variable.smarty
