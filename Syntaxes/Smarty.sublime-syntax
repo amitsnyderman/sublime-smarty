@@ -65,6 +65,8 @@ contexts:
         - include: lang
         - include: variables
         - include: strings
+    - match: '='
+      scope: keyword.operator.assignment.smarty
 
     - match: (\|)(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap|@count)
       captures:
