@@ -22,6 +22,7 @@ contexts:
           captures:
             1: punctuation.section.embedded.begin.smarty
           push:
+            - clear_scopes: 1
             - meta_scope: source.smarty
             - match: '(\s%\}|(?!\s)\})'
               captures:
