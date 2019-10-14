@@ -5,5 +5,5 @@ $0
 ]]></content>
 <tabTrigger>/switch</tabTrigger>
 <description>smarty switch end</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

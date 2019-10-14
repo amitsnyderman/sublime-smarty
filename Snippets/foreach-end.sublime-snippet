@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}/foreach${SMARTY_RDELIM:\}}$0
 ]]></content>
 <tabTrigger>/foreach</tabTrigger>
 <description>smarty foreach end</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}html_options ${2:options=\$${1:options} }${5:values=\$${3:val
 ]]></content>
 <tabTrigger>html_options</tabTrigger>
 <description>smarty html options</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

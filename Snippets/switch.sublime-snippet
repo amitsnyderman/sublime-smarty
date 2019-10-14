@@ -9,5 +9,5 @@ ${SMARTY_LDELIM:\{}/switch${SMARTY_RDELIM:\}}
 ]]></content>
 <tabTrigger>switch</tabTrigger>
 <description>smarty switch</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

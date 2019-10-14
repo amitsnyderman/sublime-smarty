@@ -5,5 +5,5 @@ ${SMARTY_LDELIM:\{}default${SMARTY_RDELIM:\}}
 ]]></content>
 <tabTrigger>default</tabTrigger>
 <description>smarty default</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

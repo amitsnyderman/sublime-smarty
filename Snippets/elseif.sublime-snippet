@@ -5,5 +5,5 @@ $0
 ]]></content>
 <tabTrigger>elseif</tabTrigger>
 <description>smarty else if</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

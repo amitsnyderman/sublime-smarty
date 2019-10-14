@@ -6,5 +6,5 @@ ${SMARTY_LDELIM:\{}/if${SMARTY_RDELIM:\}}
 ]]></content>
 <tabTrigger>if</tabTrigger>
 <description>smarty if</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

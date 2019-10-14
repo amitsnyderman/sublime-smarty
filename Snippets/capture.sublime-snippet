@@ -6,5 +6,5 @@ ${SMARTY_LDELIM:\{}/capture${SMARTY_RDELIM:\}}
 ]]></content>
 <tabTrigger>capture</tabTrigger>
 <description>smarty capture</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

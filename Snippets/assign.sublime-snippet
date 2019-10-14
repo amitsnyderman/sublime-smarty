@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}assign var="${1:name}" value=${2:value}${4: scope=${3:scope}}
 ]]></content>
 <tabTrigger>assign</tabTrigger>
 <description>smarty assign</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

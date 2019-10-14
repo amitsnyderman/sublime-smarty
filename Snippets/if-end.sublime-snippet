@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}/if${SMARTY_RDELIM:\}}$0
 ]]></content>
 <tabTrigger>/if</tabTrigger>
 <description>smarty if end</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

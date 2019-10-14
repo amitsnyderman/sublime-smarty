@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}include file="${1:file}"${3: assign=${2:name}}${6: ${4:var1}=
 ]]></content>
 <tabTrigger>include</tabTrigger>
 <description>smarty include</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

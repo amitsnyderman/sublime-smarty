@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}math equation="${1:x + y}" ${2:x}=\$${3:height} ${6:${4:y}=\$
 ]]></content>
 <tabTrigger>math</tabTrigger>
 <description>smarty math</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

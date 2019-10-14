@@ -8,5 +8,5 @@ ${SMARTY_LDELIM:\{}/if${SMARTY_RDELIM:\}}
 ]]></content>
 <tabTrigger>ifelse</tabTrigger>
 <description>smarty if else</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

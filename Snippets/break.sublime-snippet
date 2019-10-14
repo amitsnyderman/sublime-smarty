@@ -4,5 +4,5 @@ ${SMARTY_LDELIM:\{}break${SMARTY_RDELIM:\}}$0
 ]]></content>
 <tabTrigger>break</tabTrigger>
 <description>smarty break</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>

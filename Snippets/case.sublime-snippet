@@ -6,5 +6,5 @@ ${2:${SMARTY_LDELIM:\{}break${SMARTY_RDELIM:\}}}
 ]]></content>
 <tabTrigger>case</tabTrigger>
 <description>smarty case</description>
-<scope>text.html.smarty,source.smarty</scope>
+<scope>text.html.smarty</scope>
 </snippet>
