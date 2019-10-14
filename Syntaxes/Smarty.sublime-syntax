@@ -41,7 +41,7 @@ contexts:
       scope: punctuation.separator.smarty
     - match: '\b(TRUE|FALSE|true|false)\b'
       scope: constant.language.smarty
-    - match: '\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default|as)\b'
+    - match: '\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default|as|while)\b'
       scope: keyword.control.smarty
     - match: '\b([0-9]+)\b'
       scope: constant.numeric.smarty
