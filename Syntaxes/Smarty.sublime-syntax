@@ -45,7 +45,7 @@ contexts:
       scope: keyword.control.smarty
     - match: '\b([0-9]+)\b'
       scope: constant.numeric.smarty
-    - match: '\b([a-zA-Z]+)(=)'
+    - match: '\b([a-zA-Z_]+)(=)'
       scope: meta.attribute.smarty
       captures:
         0: variable.parameter.smarty
