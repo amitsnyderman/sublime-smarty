@@ -35,6 +35,8 @@ contexts:
   lang:
     - match: '\+|\-|\*'
       scope: keyword.operator.math.smarty
+    - match: '\&(?=\s)'
+      scope: keyword.operator.bitwise.smarty
     - match: '(!==|!=|!|=>|<=|>=|<|>|===|==|%|&&|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod|to)\b'
       scope: keyword.operator.smarty
     - match: '\,'
