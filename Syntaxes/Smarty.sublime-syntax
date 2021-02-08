@@ -118,7 +118,7 @@ contexts:
       captures:
         1: punctuation.accessor.smarty
         2: meta.property.object.smarty
-    - match: '(@)(first|last|index|iteration|show|total)'
+    - match: '(@)(key|first|last|index|iteration|show|total)'
       captures:
         1: punctuation.accessor.at.smarty
         2: keyword.other.smarty
