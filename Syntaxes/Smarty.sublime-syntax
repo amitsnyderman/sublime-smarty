@@ -2,35 +2,40 @@
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
 name: Smarty
+scope: text.html.smarty
+version: 2
+
+extends: Packages/HTML/HTML.sublime-syntax
+
 file_extensions:
   - tpl
-scope: text.html.smarty
 
 contexts:
-  main:
-    - match: ''
-      push: scope:text.html.basic
-      with_prototype:
-        - match: '(\{%?)\*'
+  prototype:
+    - meta_prepend: true
+    - include: Smarty.sublime-syntax#tags
+
+  tags:
+    - match: '(\{%?)\*'
+      captures:
+        1: punctuation.definition.comment.smarty
+      push:
+        - meta_scope: comment.block.smarty
+        - match: '\*(%?\})'
+          pop: 1
+    - match: '(\{(?!\s)|\{%\s?)'
+      captures:
+        1: punctuation.section.embedded.begin.smarty
+      push:
+        - clear_scopes: 1
+        - meta_scope: source.smarty
+        - match: '(\s%\}|(?!\s)\})'
           captures:
-            1: punctuation.definition.comment.smarty
-          push:
-            - meta_scope: comment.block.smarty
-            - match: '\*(%?\})'
-              pop: true
-        - match: '(\{(?!\s)|\{%\s?)'
-          captures:
-            1: punctuation.section.embedded.begin.smarty
-          push:
-            - clear_scopes: 1
-            - meta_scope: source.smarty
-            - match: '(\s%\}|(?!\s)\})'
-              captures:
-                1: punctuation.section.embedded.end.smarty
-              pop: true
-            - include: strings
-            - include: variables
-            - include: lang
+            1: punctuation.section.embedded.end.smarty
+          pop: 1
+        - include: strings
+        - include: variables
+        - include: lang
 
   lang:
     - match: '\+|\-|\*'
