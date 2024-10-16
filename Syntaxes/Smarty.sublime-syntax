@@ -1,7 +1,6 @@
 %YAML 1.2
 ---
-# http://www.sublimetext.com/docs/3/syntax.html
-name: Smarty
+name: HTML (Smarty)
 scope: text.html.smarty
 version: 2
 
@@ -9,21 +8,33 @@ extends: Packages/HTML/HTML.sublime-syntax
 
 file_extensions:
   - tpl
+  - html.smarty
 
 contexts:
   prototype:
     - meta_prepend: true
-    - include: Smarty.sublime-syntax#tags
+    - include: smarty_embedded
+    - include: comments
 
-  tags:
-    - match: '(\{%?)\*'
-      captures:
-        1: punctuation.definition.comment.smarty
+  tag-attribute-value-content:
+    - meta_prepend: true
+    - include: smarty_embedded
+
+  strings-common-content:
+    - meta_prepend: true
+    - include: smarty_embedded
+
+  comments:
+    - match: '\{\*'
+      scope: punctuation.definition.comment.begin.smarty
       push:
         - meta_scope: comment.block.smarty
-        - match: '\*(%?\})'
+        - match: '\*\}'
+          scope: punctuation.definition.comment.end.smarty
           pop: 1
-    - match: '(\{(?!\s)|\{%\s?)'
+
+  smarty_embedded:
+    - match: '(\{(?=[^*])|\{%\s?)'
       captures:
         1: punctuation.section.embedded.begin.smarty
       push:

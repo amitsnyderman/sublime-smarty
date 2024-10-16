@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Comments</string>
 	<key>scope</key>
-	<string>text.html.smarty</string>
+	<string>text.html.smarty, source.smarty</string>
 	<key>settings</key>
 	<dict>
 		<key>shellVariables</key>
