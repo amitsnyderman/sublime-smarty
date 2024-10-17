@@ -1,12 +1,9 @@
-Sublime Text Smarty
-===================
+Smarty for Sublime Text
+=======================
 
-Syntax definition and snippets for working with [Smarty template engine][1] for PHP. Compatible with Sublime Text 2 and 3.
+Syntax definition and snippets for working with Smarty template engine for PHP. Compatible with Sublime Text 4.
 
-Loosely based on the [Smarty Textmate bundle][2]
-
-[1]: http://www.smarty.net/
-[2]: http://svn.textmate.org/trunk/Bundles/PHP%20Smarty.tmbundle/
+https://smarty-php.github.io/smarty/stable/designers/language-basic-syntax/
 
 ## Installation
 Preferred method: use package control
@@ -15,12 +12,10 @@ Alternatively, you can clone this repository into the Sublime Text "Packages" di
 
 You may need to update the default sublime syntax of whatever file extension your Smarty files use. For instance, if your Smarty files all have the `.tpl` extension, you should update the default sublime syntax of all `.tpl` files to be `Smarty` : http://stackoverflow.com/questions/7574502/set-default-syntax-to-different-filetype-in-sublime-text-2
 
-If you use a Smarty delimiter other than the default of `{` and `}`, you can override the default delimiter. To do so, create a `Smarty.tmPreferences` file in the Packages/User directory, for instance, if your delimiters are `{% ` and ` %}`, with the following content: https://gist.github.com/dasl-/19f3eb5c7f8643442c72
-
 ## Usage
 Set syntax of your file to be Smarty.
 
-Currently supported autocompletions (type the keyword and then hit tab):
+Currently supported snippets (type the keyword and then hit tab):
 * assign
 * capture
 * /capture
