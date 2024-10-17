@@ -1,30 +1,16 @@
 %YAML 1.2
 ---
-name: HTML (Smarty)
-scope: text.html.smarty
+name: Smarty
+scope: text.smarty
 version: 2
-
-extends: Packages/HTML/HTML.sublime-syntax
-
-file_extensions:
-  - tpl
-  - html.smarty
+hidden: true
 
 contexts:
-  prototype:
-    - meta_prepend: true
-    - include: smarty_embedded
-    - include: comments
-
-  tag-attribute-value-content:
-    - meta_prepend: true
+  main:
+    - include: comment
     - include: smarty_embedded
 
-  strings-common-content:
-    - meta_prepend: true
-    - include: smarty_embedded
-
-  comments:
+  comment:
     - match: '\{\*'
       scope: punctuation.definition.comment.begin.smarty
       push:

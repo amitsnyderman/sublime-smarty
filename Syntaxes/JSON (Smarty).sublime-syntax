@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+name: JSON (Smarty)
+scope: source.json.smarty
+version: 2
+
+extends: Packages/JSON/JSON.sublime-syntax
+
+file_extensions:
+  - js.smarty
+
+contexts:
+
+  prototype:
+    - meta_prepend: true
+    - include: Smarty.sublime-syntax#comment
+    - include: Smarty.sublime-syntax#smarty_embedded

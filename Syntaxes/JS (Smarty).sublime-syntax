@@ -1,0 +1,21 @@
+%YAML 1.2
+---
+name: JavaScript (Smarty)
+scope: source.js.smarty
+version: 2
+
+extends: Packages/JavaScript/JavaScript.sublime-syntax
+
+file_extensions:
+  - js.smarty
+
+contexts:
+
+  prototype:
+    - meta_prepend: true
+    - include: Smarty.sublime-syntax#comment
+    - include: Smarty.sublime-syntax#smarty_embedded
+
+  string-content:
+    - meta_prepend: true
+    - include: Smarty.sublime-syntax#smarty_embedded

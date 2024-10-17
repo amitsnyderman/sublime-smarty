@@ -1,0 +1,21 @@
+%YAML 1.2
+---
+name: CSS (Smarty)
+scope: source.css.smarty
+version: 2
+
+extends: Packages/CSS/CSS.sublime-syntax
+
+file_extensions:
+  - css.smarty
+
+contexts:
+
+  prototype:
+    - meta_prepend: true
+    - include: Smarty.sublime-syntax#smarty_embedded
+    - include: Smarty.sublime-syntax#comment
+
+  string-content:
+    - meta_prepend: true
+    - include: Smarty.sublime-syntax#twig_embedded
