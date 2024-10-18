@@ -1,0 +1,153 @@
+| SYNTAX TEST "Packages/Smarty/Syntaxes/HTML (Smarty).sublime-syntax"
+
+<h1>{$title|escape}</h1>
+<ul>
+    {foreach $cities as $city}
+        <li>{$city.name|escape} ({$city.population})</li>
+    {foreachelse}
+        <li>no cities found</li>
+    {/foreach}
+</ul>
+
+{* https://smarty-php.github.io/smarty/stable/designers/language-basic-syntax/language-syntax-comments/ *}
+{* this is a comment *}
+| <- text.html.smarty comment.block.smarty punctuation.definition.comment.begin.smarty
+|^ punctuation.definition.comment.begin.smarty
+|                    ^^ punctuation.definition.comment.end.smarty
+|^^^^ comment.block.smarty
+|                      ^ - comment
+
+{* this multiline smarty
+    comment is
+    not sent to browser
+| ^^^^ comment
+*}
+
+{*
+    <select name="company">
+      {html_options options=$vals selected=$selected_id}
+    </select>
+|   ^^^^ comment
+*}
+
+{* {include file=$includeFile} *}
+|   ^^^^ comment
+
+
+{* https://smarty-php.github.io/smarty/stable/designers/language-basic-syntax/language-syntax-variables/ *}
+{$foo}        <-- displaying a simple variable (non array/object)
+{$foo[4]}     <-- display the 5th element of a zero-indexed array
+|^^^^^^^^ source.smarty
+|        ^ - source.smarty
+| <- punctuation.section.embedded.begin.smarty
+|^^^^ variable.other.smarty
+|^ punctuation.definition.variable.smarty
+|       ^ punctuation.section.embedded.end.smarty
+{$foo.bar}    <-- display the "bar" key value of an array, similar to PHP $foo['bar']
+{$foo.$bar}   <-- display variable key value of an array, similar to PHP $foo[$bar]
+{$foo->bar}   <-- display the object property "bar"
+{$foo->bar()} <-- display the return value of object method "bar"
+{#foo#}       <-- display the config file variable "foo"
+|^^^^^^ source.smarty
+{$smarty.config.foo} <-- synonym for {#foo#}
+{$foo[bar]}   <-- syntax only valid in a section loop, see {section}
+{assign var=foo value='baa'}{$foo} <--  displays "baa", see {assign}
+
+{* https://smarty-php.github.io/smarty/stable/designers/language-variables/language-config-variables/#examples *}
+{config_load file='foo.conf'}
+<html>
+    <title>{#pageTitle#}</title>
+    <body bgcolor="{#bodyBgColor#}">
+        <table border="{#tableBorderSize#}" bgcolor="{#tableBgColor#}">
+            <tr bgcolor="{#rowBgColor#}">
+                <td>First</td>
+                <td>Last</td>
+                <td>Address</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
+{% assign var="name" value="value" %}
+
+{% capture name="name" assign="variable" %}
+	<p class="test">Embedded HTML</p>
+{% /capture %}
+
+{% if isset($name) && not empty($name) and ($name == "string" || $name eq 'string') %}
+	{%* True *%}
+{% else %}
+	{%* False *%}
+{% /if %}
+
+{% if 2 > 1 and 2 gt 1 and 1 < 2 and 1 lt 2 %}
+
+{% /if %}
+
+{% foreach from=$list item='item' %}
+	{% $item|capitalize %}<br/>
+{% /foreach %}
+
+{% include file="file" key="value" %}
+
+{% $var %}
+{% $var->method($param, $elem) %}
+
+
+{assign var="name" value="value"}
+
+{capture name="name" assign="variable"}
+	<p class="test {$some_var}">Embedded HTML</p>
+{/capture}
+
+{if isset($name) && not empty($name) and ($name == "string" || $name eq 'string')}
+	{* True *}
+{else}
+	{* False *}
+{/if}
+
+{if 2 > 1 and 2 gt 1 and 1 < 2 and 1 lt 2}
+
+{/if}
+
+{foreach from=$list item='item'}
+	{% $item|capitalize %}<br/>
+{/foreach}
+
+{include file="file" key="value"}
+
+{$var}
+{$var->method()}
+
+
+{* smarty in js *}
+<script>
+   // the following braces are ignored by Smarty
+   // since they are surrounded by whitespace
+   function foobar {
+    alert('foobar!');
+   }
+|  ^ - source.smarty
+   // this one will need literal escapement
+   {literal}
+|  ^^^^^^^^^ source.smarty
+    function bazzy {alert('foobar!');}
+   {/literal}
+</script>
+
+{* smarty in css *}
+<style type="text/css">
+   body {
+|       ^ - source.smarty
+      color: {$blue}
+|            ^^^^^^^ source.smarty
+|           ^ - source.smarty
+|                   ^ - source.smarty
+   }
+</style>
+
+<body style="color: {$blue}"></body>
+|                   ^^^^^^^ source.smarty
+|                  ^ - source.smarty
+|                          ^ - source.smarty

@@ -13,9 +13,9 @@ contexts:
 
   prototype:
     - meta_prepend: true
-    - include: Smarty.sublime-syntax#smarty_embedded
     - include: Smarty.sublime-syntax#comment
+    - include: Smarty.sublime-syntax#smarty_embedded
 
   string-content:
     - meta_prepend: true
-    - include: Smarty.sublime-syntax#twig_embedded
+    - include: Smarty.sublime-syntax#smarty_embedded

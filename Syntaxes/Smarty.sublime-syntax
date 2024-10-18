@@ -20,7 +20,7 @@ contexts:
           pop: 1
 
   smarty_embedded:
-    - match: '(\{(?=[^*])|\{%\s?)'
+    - match: '(\{(?=\S)|\{%\s?)'
       captures:
         1: punctuation.section.embedded.begin.smarty
       push:

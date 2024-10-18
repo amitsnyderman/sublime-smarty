@@ -13,8 +13,8 @@ file_extensions:
 contexts:
   prototype:
     - meta_prepend: true
-    - include: Smarty.sublime-syntax#smarty_embedded
     - include: Smarty.sublime-syntax#comment
+    - include: Smarty.sublime-syntax#smarty_embedded
 
   tag-attribute-value-content:
     - meta_prepend: true
@@ -109,3 +109,20 @@ contexts:
         2: comment.block.html punctuation.definition.comment.end.html
         3: source.css.embedded.html
         4: comment.block.html punctuation.definition.comment.end.html
+
+  tag-style-attribute-value:
+    - match: \"
+      scope: meta.string.html string.quoted.double.html punctuation.definition.string.begin.html
+      embed: scope:source.css.smarty
+      embed_scope: meta.string.html meta.interpolation.html source.css.embedded.html
+      escape: \"
+      escape_captures:
+        0: meta.string.html string.quoted.double.html punctuation.definition.string.end.html
+    - match: \'
+      scope: meta.string.html string.quoted.single.html punctuation.definition.string.begin.html
+      embed: scope:source.css.smarty
+      embed_scope: meta.string.html meta.interpolation.html source.css.embedded.html
+      escape: \'
+      escape_captures:
+        0: meta.string.html string.quoted.single.html punctuation.definition.string.end.html
+    - include: else-pop
