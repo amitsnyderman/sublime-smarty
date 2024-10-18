@@ -8,6 +8,7 @@ hidden: true
 contexts:
   main:
     - include: comment
+    - include: literal
     - include: smarty_embedded
 
   comment:
@@ -19,16 +20,32 @@ contexts:
           scope: punctuation.definition.comment.end.smarty
           pop: 1
 
-  smarty_embedded:
-    - match: '(\{(?=\S)|\{%\s?)'
+  literal:
+    - match: '(\{)(literal)(\})'
       captures:
-        1: punctuation.section.embedded.begin.smarty
+        0: meta.tag.smarty
+        1: punctuation.definition.tag.begin.smarty
+        2: keyword.control.smarty
+        3: punctuation.definition.tag.end.smarty
+      push:
+        - meta_scope: comment.block.smarty
+        - match: '(\{)(/)(literal)(\})'
+          captures:
+            0: meta.tag.smarty
+            1: punctuation.definition.tag.begin.smarty
+            2: keyword.operator.smarty
+            3: keyword.control.smarty
+            4: punctuation.definition.tag.end.smarty
+          pop: 1
+
+  smarty_embedded:
+    - match: '\{(?=\S)'
+      scope: punctuation.section.embedded.begin.smarty
       push:
         - clear_scopes: 1
         - meta_scope: source.smarty
-        - match: '(\s%\}|(?!\s)\})'
-          captures:
-            1: punctuation.section.embedded.end.smarty
+        - match: '\}'
+          scope: punctuation.section.embedded.end.smarty
           pop: 1
         - include: strings
         - include: variables
@@ -54,7 +71,7 @@ contexts:
       captures:
         0: variable.parameter.smarty
         2: keyword.operator.assignment.smarty
-    - match: '\b(capture|config_load|counter|cycle|debug|eval|for|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|append|assign|constant|block|html_[a-z_]+)\b'
+    - match: '\b(capture|config_load|counter|cycle|debug|eval|for|fetch|include_php|include|insert|math|strip|rdelim|ldelim|append|assign|constant|block|html_[a-z_]+)\b'
       scope: support.function.built-in.smarty
     - match: '\b([a-z-_]+)\b(?=\()'
       scope: meta.function-call.smarty

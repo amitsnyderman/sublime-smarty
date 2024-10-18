@@ -131,9 +131,12 @@
 |  ^ - source.smarty
    // this one will need literal escapement
    {literal}
-|  ^^^^^^^^^ source.smarty
+|  ^^^^^^^^^ meta.tag.smarty
     function bazzy {alert('foobar!');}
    {/literal}
+|  ^^^^^^^^^^ meta.tag.smarty
+|   ^ keyword.operator
+|    ^ keyword.control
 </script>
 
 {* smarty in css *}

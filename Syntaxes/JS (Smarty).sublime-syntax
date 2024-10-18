@@ -14,6 +14,7 @@ contexts:
   prototype:
     - meta_prepend: true
     - include: Smarty.sublime-syntax#comment
+    - include: Smarty.sublime-syntax#literal
     - include: Smarty.sublime-syntax#smarty_embedded
 
   string-content:
