@@ -36,7 +36,7 @@ contexts:
         2: keyword.control.smarty
         3: punctuation.definition.tag.end.smarty
       push:
-        - meta_scope: comment.block.smarty
+        - meta_scope: constant.character.twig
         - match: '(\{)(/)(literal)(\})'
           captures:
             0: meta.tag.smarty
