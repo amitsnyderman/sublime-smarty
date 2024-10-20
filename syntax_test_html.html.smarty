@@ -59,11 +59,23 @@
 {$foo[bar]}   <-- syntax only valid in a section loop, see {section}
 {assign var=foo value='baa'}{$foo} <--  displays "baa", see {assign}
 
+
 {* https://smarty-php.github.io/smarty/stable/designers/language-variables/language-config-variables/#examples *}
 {config_load file='foo.conf'}
 <html>
     <title>{#pageTitle#}</title>
+|          ^^^^^^^^^^^^^ meta.tag.smarty
+|                       ^ - meta.tag.smarty
+|          ^^ punctuation.definition.begin.smarty
+|            ^^^^^^^^^ variable.other.smarty
+|                     ^^ punctuation.definition.end.smarty
     <body bgcolor="{#bodyBgColor#}">
+        |          ^^^^^^^^^^^^^^^ - string
+        |          ^^^^^^^^^^^^^^^ meta.tag.smarty
+        |                         ^ - meta.tag.smarty
+        |          ^^ punctuation.definition.begin.smarty
+        |            ^^^^^^^^^^^ variable.other.smarty
+        |                       ^^ punctuation.definition.end.smarty
         <table border="{#tableBorderSize#}" bgcolor="{#tableBgColor#}">
             <tr bgcolor="{#rowBgColor#}">
                 <td>First</td>

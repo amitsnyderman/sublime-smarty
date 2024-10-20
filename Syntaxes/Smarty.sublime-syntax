@@ -39,6 +39,16 @@ contexts:
           pop: 1
 
   smarty_embedded:
+    - match: (?=\{#)
+      push:
+        - clear_scopes: 1
+        - match: '(\{#)(\S+)(#\})'
+          captures:
+            0: meta.tag.smarty
+            1: punctuation.definition.begin.smarty
+            2: variable.other.smarty
+            3: punctuation.definition.end.smarty
+          pop: 1
     - match: '\{(?=\S)'
       scope: punctuation.section.embedded.begin.smarty
       push:
