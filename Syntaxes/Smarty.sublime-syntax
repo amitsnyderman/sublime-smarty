@@ -171,6 +171,14 @@ contexts:
       captures:
         1: punctuation.accessor.at.smarty
         2: keyword.other.smarty
+    - match: \[
+      scope: punctuation.section.brackets.begin.smarty
+      push:
+        - meta_scope: meta.brackets.smarty
+        - match: \]
+          scope: punctuation.section.brackets.end.smarty
+          pop: 1
+        - include: lang
 
   properties:
     - include: functions

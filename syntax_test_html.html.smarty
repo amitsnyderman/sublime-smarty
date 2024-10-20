@@ -43,6 +43,11 @@
 |^^^^ variable.other.smarty
 |^ punctuation.definition.variable.smarty
 |       ^ punctuation.section.embedded.end.smarty
+|    ^^^ meta.brackets.smarty
+|       ^ - meta.brackets.smarty
+|    ^ punctuation.section.brackets.begin.smarty
+|      ^ punctuation.section.brackets.end.smarty
+|     ^ constant.numeric
 {$foo.bar}    <-- display the "bar" key value of an array, similar to PHP $foo['bar']
 |    ^ punctuation.accessor.smarty
 |     ^^^ meta.property.object.smarty
