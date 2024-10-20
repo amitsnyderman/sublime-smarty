@@ -47,6 +47,8 @@
 |    ^ punctuation.accessor.smarty
 |     ^^^ meta.property.object.smarty
 {$foo.$bar}   <-- display variable key value of an array, similar to PHP $foo[$bar]
+|    ^ punctuation.accessor.smarty
+|     ^^^ variable.other.smarty
 {$foo->bar}   <-- display the object property "bar"
 |    ^^ punctuation.accessor.arrow.smarty
 |      ^^^ meta.property.object.smarty
@@ -54,7 +56,7 @@
 |    ^^ punctuation.accessor.arrow.smarty
 |      ^^^ variable.function.smarty
 {#foo#}       <-- display the config file variable "foo"
-|^^^^^^ source.smarty
+|^^^^^^ source.smarty meta.tag.smarty
 {$smarty.config.foo} <-- synonym for {#foo#}
 {$foo[bar]}   <-- syntax only valid in a section loop, see {section}
 {assign var=foo value='baa'}{$foo} <--  displays "baa", see {assign}

@@ -11,6 +11,14 @@ contexts:
     - include: literal
     - include: smarty_embedded
 
+  else_pop:
+    - match: (?=\S)
+      pop: 1
+
+  immediately_pop:
+    - match: ''
+      pop: 1
+
   comment:
     - match: '\{\*'
       scope: punctuation.definition.comment.begin.smarty
@@ -44,7 +52,7 @@ contexts:
         - clear_scopes: 1
         - match: '(\{#)(\S+)(#\})'
           captures:
-            0: meta.tag.smarty
+            0: source.smarty meta.tag.smarty
             1: punctuation.definition.begin.smarty
             2: variable.other.smarty
             3: punctuation.definition.end.smarty
@@ -104,12 +112,15 @@ contexts:
         - meta_scope: meta.group.smarty
         - match: '\('
           scope: punctuation.group.begin.smarty
+          push:
+          - include: lang
+          - include: variables
+          - include: strings
+          - match: '(?=\))'
+            pop: 1
         - match: '\)'
           scope: punctuation.group.end.smarty
-          pop: true
-        - include: lang
-        - include: variables
-        - include: strings
+          pop: 1
 
   strings:
     - match: "'"
@@ -120,7 +131,7 @@ contexts:
         - match: "'"
           captures:
             0: punctuation.definition.string.end.smarty
-          pop: true
+          pop: 1
         - match: '\\.'
           scope: constant.character.escape.smarty
     - match: '"'
@@ -131,7 +142,7 @@ contexts:
         - match: '"'
           captures:
             0: punctuation.definition.string.end.smarty
-          pop: true
+          pop: 1
         - match: '\\.'
           scope: constant.character.escape.smarty
 
@@ -144,7 +155,7 @@ contexts:
       scope: variable.other.smarty
       captures:
         1: punctuation.definition.variable.smarty
-    - match: '(\.)(?=[a-zA-Z0-9_])'
+    - match: '(\.)(?=[a-zA-Z0-9_$])'
       scope: variable.other.smarty
       captures:
         1: punctuation.accessor.smarty
@@ -163,6 +174,8 @@ contexts:
 
   properties:
     - include: functions
+    - include: variables
     - match: '([a-zA-Z0-9_]+)\b'
       scope: meta.property.object.smarty
-      pop: true
+      pop: 1
+    - include: immediately_pop
