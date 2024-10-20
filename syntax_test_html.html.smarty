@@ -44,9 +44,15 @@
 |^ punctuation.definition.variable.smarty
 |       ^ punctuation.section.embedded.end.smarty
 {$foo.bar}    <-- display the "bar" key value of an array, similar to PHP $foo['bar']
+|    ^ punctuation.accessor.smarty
+|     ^^^ meta.property.object.smarty
 {$foo.$bar}   <-- display variable key value of an array, similar to PHP $foo[$bar]
 {$foo->bar}   <-- display the object property "bar"
+|    ^^ punctuation.accessor.arrow.smarty
+|      ^^^ meta.property.object.smarty
 {$foo->bar()} <-- display the return value of object method "bar"
+|    ^^ punctuation.accessor.arrow.smarty
+|      ^^^ variable.function.smarty
 {#foo#}       <-- display the config file variable "foo"
 |^^^^^^ source.smarty
 {$smarty.config.foo} <-- synonym for {#foo#}
