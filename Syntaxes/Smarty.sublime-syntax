@@ -103,12 +103,10 @@ contexts:
         2: support.function.variable-modifier.custom.smarty
     - include: functions
     - include: tags
+    - include: groups
 
-  functions:
-    - match: '\b([a-z-_]+)\b(?=\()'
-      scope: meta.function-call.smarty
-      captures:
-        1: variable.function.smarty
+  groups:
+    - match: '(?=\()'
       push:
         - meta_scope: meta.group.smarty
         - match: '\('
@@ -122,6 +120,15 @@ contexts:
         - match: '\)'
           scope: punctuation.group.end.smarty
           pop: 1
+
+  functions:
+    - match: '\b([a-z-_]+)\b(?=\()'
+      scope: meta.function-call.smarty
+      captures:
+        1: variable.function.smarty
+      push:
+        - include: groups
+        - include: immediately_pop
 
   strings:
     - match: "'"

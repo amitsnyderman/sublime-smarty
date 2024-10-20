@@ -131,6 +131,10 @@ Math and embedding tags:
 {% /capture %}
 
 {% if isset($name) && not empty($name) and ($name == "string" || $name eq 'string') %}
+|                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.group
+|                                                                                  ^ - meta.group
+|                                          ^ punctuation.group.begin
+|                                                                                 ^ punctuation.group.end
 	{%* True *%}
 {% else %}
 	{%* False *%}
