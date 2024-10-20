@@ -37,8 +37,8 @@
 {* https://smarty-php.github.io/smarty/stable/designers/language-basic-syntax/language-syntax-variables/ *}
 {$foo}        <-- displaying a simple variable (non array/object)
 {$foo[4]}     <-- display the 5th element of a zero-indexed array
-|^^^^^^^^ source.smarty
-|        ^ - source.smarty
+|^^^^^^^^ meta.tag.smarty
+|        ^ - meta.tag.smarty
 | <- punctuation.section.embedded.begin.smarty
 |^^^^ variable.other.smarty
 |^ punctuation.definition.variable.smarty
@@ -61,11 +61,41 @@
 |    ^^ punctuation.accessor.arrow.smarty
 |      ^^^ variable.function.smarty
 {#foo#}       <-- display the config file variable "foo"
-|^^^^^^ source.smarty meta.tag.smarty
+|^^^^^^ meta.tag.smarty
 {$smarty.config.foo} <-- synonym for {#foo#}
 {$foo[bar]}   <-- syntax only valid in a section loop, see {section}
 {assign var=foo value='baa'}{$foo} <--  displays "baa", see {assign}
 
+Many other combinations are allowed
+
+{$foo.bar.baz}
+{$foo.$bar.$baz}
+{$foo[4].baz}
+{$foo[4].$baz}
+{$foo.bar.baz[4]}
+{$foo->bar($baz,2,$bar)} <-- passing parameters
+|         ^^^^^^^^^^^^^ meta.group
+|          ^^^^ variable.other
+|              ^ punctuation
+|               ^ constant.numeric
+|                ^ punctuation
+|                 ^^^^ variable.other
+{"foo"}       <-- static values are allowed
+
+Math and embedding tags:
+
+{$x+$y}                             // will output the sum of x and y.
+{assign var=foo value=$x+$y}        // in attributes
+{$foo[$x+3]}                        // as array index
+|     ^^ variable.other
+|       ^ keyword.operator
+|        ^ constant.numeric
+{$foo={counter}+3}                  // tags within tags
+|     ^^^^^^^^^ meta.tag.smarty
+|              ^ keyword.operator
+|               ^ constant.numeric
+{$foo="this is message {counter}"}  // tags within double quoted strings
+|                      ^^^^^^^^^
 
 {* https://smarty-php.github.io/smarty/stable/designers/language-variables/language-config-variables/#examples *}
 {config_load file='foo.conf'}
@@ -169,13 +199,13 @@
    body {
 |       ^ - source.smarty
       color: {$blue}
-|            ^^^^^^^ source.smarty
-|           ^ - source.smarty
-|                   ^ - source.smarty
+|            ^^^^^^^ meta.tag.smarty
+|           ^ - meta.tag.smarty
+|                   ^ - meta.tag.smarty
    }
 </style>
 
 <body style="color: {$blue}"></body>
-|                   ^^^^^^^ source.smarty
-|                  ^ - source.smarty
-|                          ^ - source.smarty
+|                   ^^^^^^^ meta.tag.smarty
+|                  ^ - meta.tag.smarty
+|                          ^ - meta.tag.smarty

@@ -9,7 +9,7 @@ contexts:
   main:
     - include: comment
     - include: literal
-    - include: smarty_embedded
+    - include: tags
 
   else_pop:
     - match: (?=\S)
@@ -46,13 +46,13 @@ contexts:
             4: punctuation.definition.tag.end.smarty
           pop: 1
 
-  smarty_embedded:
+  tags:
     - match: (?=\{#)
       push:
         - clear_scopes: 1
         - match: '(\{#)(\S+)(#\})'
           captures:
-            0: source.smarty meta.tag.smarty
+            0: meta.tag.smarty
             1: punctuation.definition.begin.smarty
             2: variable.other.smarty
             3: punctuation.definition.end.smarty
@@ -60,8 +60,8 @@ contexts:
     - match: '\{(?=\S)'
       scope: punctuation.section.embedded.begin.smarty
       push:
+        - meta_scope: meta.tag.smarty
         - clear_scopes: 1
-        - meta_scope: source.smarty
         - match: '\}'
           scope: punctuation.section.embedded.end.smarty
           pop: 1
@@ -102,6 +102,7 @@ contexts:
         1: keyword.operator.logical.pipe.smarty
         2: support.function.variable-modifier.custom.smarty
     - include: functions
+    - include: tags
 
   functions:
     - match: '\b([a-z-_]+)\b(?=\()'
@@ -113,11 +114,11 @@ contexts:
         - match: '\('
           scope: punctuation.group.begin.smarty
           push:
-          - include: lang
-          - include: variables
-          - include: strings
-          - match: '(?=\))'
-            pop: 1
+            - include: lang
+            - include: variables
+            - include: strings
+            - match: '(?=\))'
+              pop: 1
         - match: '\)'
           scope: punctuation.group.end.smarty
           pop: 1
@@ -145,6 +146,7 @@ contexts:
           pop: 1
         - match: '\\.'
           scope: constant.character.escape.smarty
+        - include: tags
 
   variables:
     - match: '\b(\$)Smarty\.'
@@ -179,6 +181,7 @@ contexts:
           scope: punctuation.section.brackets.end.smarty
           pop: 1
         - include: lang
+        - include: variables
 
   properties:
     - include: functions

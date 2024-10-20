@@ -14,15 +14,15 @@ contexts:
   prototype:
     - meta_prepend: true
     - include: Smarty.sublime-syntax#comment
-    - include: Smarty.sublime-syntax#smarty_embedded
+    - include: Smarty.sublime-syntax#tags
 
   tag-attribute-value-content:
     - meta_prepend: true
-    - include: Smarty.sublime-syntax#smarty_embedded
+    - include: Smarty.sublime-syntax#tags
 
   strings-common-content:
     - meta_prepend: true
-    - include: Smarty.sublime-syntax#smarty_embedded
+    - include: Smarty.sublime-syntax#tags
 
   ##############################################################################
   # below: embedded script/style tags
